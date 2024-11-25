@@ -1,8 +1,6 @@
 const express = require("express");
 const axios = require("axios");
 
-const Sequelize = require("sequelize");
-
 const app = new express();
 
 const PORT = 3005;
