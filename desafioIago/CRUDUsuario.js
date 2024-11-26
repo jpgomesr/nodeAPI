@@ -1,6 +1,6 @@
 const express = require("express");
 const axios = require("axios");
-const user = require("./usuario");
+const user = require("./models/usuario");
 
 const app = new express();
 
@@ -93,8 +93,6 @@ app.delete("/delete_user/:name", async (req, res) => {
 
 app.put("/update_user/:name", async (req, res) => {
    const name = req.params.name;
-
-   console.log(`Procurando usuário com o nome: ${name}`);
 
    try {
       const alterUser = await user.findOne({ where: { nome: name } });
