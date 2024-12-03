@@ -1,6 +1,6 @@
 const express = require("express");
 const axios = require("axios");
-const user = require("./models/usuario");
+const user = require("./Models/usuario");
 
 const app = new express();
 
