@@ -1,8 +1,8 @@
 const Sequelize = require("sequelize");
-const database = require("../db");
+const database = require("../Repository/database");
 
-const imagens = database.define(
-   "tb_imagens",
+const usuario = database.define(
+   "tb_usuarios",
    {
       id: {
          type: Sequelize.INTEGER,
@@ -10,16 +10,12 @@ const imagens = database.define(
          allowNull: false,
          primaryKey: true,
       },
-      referencia: {
+      nome: {
          type: Sequelize.STRING,
          allowNull: false,
       },
       data_criacao: {
          type: Sequelize.DATE,
-         allowNull: false,
-      },
-      titulo: {
-         type: Sequelize.STRING,
          allowNull: false,
       },
    },
@@ -28,4 +24,4 @@ const imagens = database.define(
    }
 );
 
-module.exports = imagens;
+module.exports = usuario;
