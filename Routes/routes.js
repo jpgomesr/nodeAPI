@@ -13,6 +13,6 @@ router.post("/add_image", imageController.addImage);
 router.get("/get_image/:title", imageController.getImage);
 router.get("/get_all_images", imageController.getAllImages);
 router.delete("/delete_image/:title", imageController.deleteImage);
-router.put("update_image", imageController.updateImage);
+router.put("update_image/:title", imageController.updateImage);
 
 module.exports = router;
