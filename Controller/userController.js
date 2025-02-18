@@ -1,5 +1,5 @@
-const user = require("../Models/userModel");
-const userService = require("../Service/userService");
+const user = require("../models/userModel");
+const userService = require("../service/userService");
 
 const addUser = async (req, res) => {
    try {

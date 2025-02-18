@@ -1,6 +1,6 @@
-const image = require("../Models/imageModel");
+const image = require("../models/imageModel");
 
-const addImage = async (req) => {
+const addImage = async (req, ref) => {
    const ref = req.body.reference;
    const title = req.body.title;
 

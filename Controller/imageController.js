@@ -1,5 +1,5 @@
-const image = require("../Models/imageModel");
-const imageService = require("../Service/imageService");
+const image = require("../models/imageModel");
+const imageService = require("../service/imageService");
 
 const addImage = async (req, res) => {
    try {
