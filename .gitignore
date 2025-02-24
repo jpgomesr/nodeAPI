@@ -17,5 +17,7 @@ node_modules/
 # Ignora uma pasta específica
 /config/
 
+/node_modules/
+
 # Ignora um arquivo específico
 /arquivo.txt

@@ -1,51 +1,51 @@
-const user = require("../models/userModel");
+// const user = require("../models/userModel");
 
-const addUser = async (req) => {
-   const name = req.body.name;
-   if (!name || name.trim() === "") throw new Error("Nome está vazio!");
+// const addUser = async (req) => {
+//    const name = req.body.name;
+//    if (!name || name.trim() === "") throw new Error("Nome está vazio!");
 
-   return await (newUser = user.create({
-      nome: name,
-      data_criacao: new Date(),
-   }));
-};
+//    return await (newUser = user.create({
+//       nome: name,
+//       data_criacao: new Date(),
+//    }));
+// };
 
-const getUser = async (req) => {
-   const name = req.params.name;
-   if (!name || name.trim() === "") throw new Error("Nome está vazio!");
+// const getUser = async (req) => {
+//    const name = req.params.name;
+//    if (!name || name.trim() === "") throw new Error("Nome está vazio!");
 
-   return await user.findOne({
-      where: { nome: name },
-   });
-};
+//    return await user.findOne({
+//       where: { nome: name },
+//    });
+// };
 
-const getAllUsers = async () => {
-   return await user.findAll();
-};
+// const getAllUsers = async () => {
+//    return await user.findAll();
+// };
 
-const deleteUser = async (req) => {
-   const name = req.params.name;
-   if (!name || name.trim() === "") throw new Error("Nome está vazio!");
+// const deleteUser = async (req) => {
+//    const name = req.params.name;
+//    if (!name || name.trim() === "") throw new Error("Nome está vazio!");
 
-   return await user.destroy({ where: { nome: name } });
-};
+//    return await user.destroy({ where: { nome: name } });
+// };
 
-const updateUser = async (req) => {
-   const name = req.params.name;
+// const updateUser = async (req) => {
+//    const name = req.params.name;
 
-   if (!name || name.trim() === "") throw new Error("Nome está vazio!");
+//    if (!name || name.trim() === "") throw new Error("Nome está vazio!");
 
-   const alterUser = await user.findOne({ where: { nome: name } });
+//    const alterUser = await user.findOne({ where: { nome: name } });
 
-   const newName = req.body.name;
-   alterUser.nome = newName;
-   return await alterUser.save();
-};
+//    const newName = req.body.name;
+//    alterUser.nome = newName;
+//    return await alterUser.save();
+// };
 
-module.exports = {
-   addUser,
-   getUser,
-   getAllUsers,
-   deleteUser,
-   updateUser,
-};
+// module.exports = {
+//    addUser,
+//    getUser,
+//    getAllUsers,
+//    deleteUser,
+//    updateUser,
+// };

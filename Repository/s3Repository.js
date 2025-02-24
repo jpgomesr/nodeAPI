@@ -20,7 +20,7 @@ class s3Repository {
       });
    };
 
-   static downloadFile = (bucketName, keyName, downloadPath) => {
+   static downloadFile = (downloadPath, bucketName, keyName) => {
       const params = {
          Bucket: bucketName,
          Key: keyName,
